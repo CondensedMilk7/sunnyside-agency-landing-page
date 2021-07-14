@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
+
+:root {
+  /* Primary */
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  /* graphic design text */
+  --dark-desat-cyan: hsl(167, 40%, 24%);
+  /* photography text */
+  --dark-blue: hsl(198, 62%, 26%);
+  /* footer */
+  --dark-mod-cyan: hsl(168, 34%, 41%);
+
+  /* Neutral */
+  --very-dark-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+  /* font-family: 'Fraunces', serif; */
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", serif;
+}
+
+.hero {
+  background: url("./images/mobile/image-header.jpg") no-repeat;
+  background-size: 100% auto;
+  /* background-attachment: fixed; */
+  /* width: 100vw; */
+  max-height: 100vh;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}

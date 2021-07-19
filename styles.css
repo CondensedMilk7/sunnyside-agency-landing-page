@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
 
 :root {
   /* Primary */
   --soft-red: hsl(7, 99%, 70%);
-  --yellow: hsl(51, 100%, 49%);
+  --yellow: hsla(51, 100%, 49%, 0.295);
   /* graphic design text */
   --dark-desat-cyan: hsl(167, 40%, 24%);
   /* photography text */
@@ -37,15 +37,92 @@ h3 {
   font-family: "Fraunces", serif;
 }
 
-.hero {
-  background: url("./images/mobile/image-header.jpg") no-repeat;
-  background-size: 100% auto;
-  /* background-attachment: fixed; */
-  /* width: 100vw; */
-  max-height: 100vh;
+.main-header {
+  position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  padding-top: 24px;
+}
+
+.hero {
+  background: url("./images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding-bottom: 147%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hidden {
   display: none;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--white);
+}
+
+.title-arrow {
+  position: absolute;
+  top: 15%;
+}
+
+.title-arrow img {
+  margin-top: 36px;
+}
+
+section {
+  text-align: center;
+}
+
+.section-info {
+  padding: 40px 20px 40px 20px;
+}
+
+.section-info h2 {
+  font-weight: 900;
+  padding: 16px;
+  padding-bottom: 0;
+}
+
+.section-info p {
+  color: var(--dark-grayish-blue);
+  margin: 26px 0;
+}
+
+.learn-more {
+  text-decoration: none;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  background: var(--yellow);
+  background: linear-gradient(0deg, var(--yellow) 10%, rgba(2, 0, 36, 0) 50%);
+  padding: 0 8px;
+  padding-bottom: 4px;
+  border-radius: 20px;
+  /* add another div with margin: -x; */
+}
+
+.bg-yellow {
+}
+
+.bg-red {
+}
+
+.section1 .section-img {
+  background: url("images/mobile/image-transform.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 80%;
 }

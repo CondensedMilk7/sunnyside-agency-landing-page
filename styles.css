@@ -3,8 +3,8 @@
 
 :root {
   /* Primary */
-  --soft-red: hsl(7, 99%, 70%);
-  --yellow: hsla(51, 100%, 49%, 0.295);
+  --soft-red: hsla(7, 99%, 70%, 0.308);
+  --yellow: hsla(51, 100%, 49%, 0.308);
   /* graphic design text */
   --dark-desat-cyan: hsl(167, 40%, 24%);
   /* photography text */
@@ -35,6 +35,7 @@ h1,
 h2,
 h3 {
   font-family: "Fraunces", serif;
+  color: var(--very-dark-blue);
 }
 
 .main-header {
@@ -54,7 +55,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  padding-bottom: 147%;
+  padding-bottom: 75%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -74,10 +75,15 @@ h3 {
 }
 
 .title-arrow {
-  position: absolute;
-  top: 15%;
+  /* position: relative; */
+  transform: translateY(140px);
 }
 
+@media (max-width: 305px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
 .title-arrow img {
   margin-top: 36px;
 }
@@ -87,36 +93,51 @@ section {
 }
 
 .section-info {
-  padding: 40px 20px 40px 20px;
+  padding: 40px 16px 40px 16px;
+  margin-bottom: 20px;
 }
 
 .section-info h2 {
   font-weight: 900;
   padding: 16px;
   padding-bottom: 0;
+  color: var(--very-dark-blue);
 }
 
 .section-info p {
   color: var(--dark-grayish-blue);
   margin: 26px 0;
+  line-height: 1.5rem;
 }
 
 .learn-more {
   text-decoration: none;
   font-family: "Fraunces", serif;
   text-transform: uppercase;
-  background: var(--yellow);
-  background: linear-gradient(0deg, var(--yellow) 10%, rgba(2, 0, 36, 0) 50%);
+  font-weight: 800;
   padding: 0 8px;
   padding-bottom: 4px;
   border-radius: 20px;
-  /* add another div with margin: -x; */
+  color: var(--very-dark-blue);
+  /* margin: 10px 0 50px 0; */
 }
 
 .bg-yellow {
+  background: var(--yellow);
+  height: 0.5rem;
+  width: 7.8rem;
+  margin: auto;
+  margin-top: -0.4rem;
+  border-radius: 8px;
 }
 
 .bg-red {
+  background: var(--soft-red);
+  height: 0.5rem;
+  width: 7.8rem;
+  margin: auto;
+  margin-top: -0.4rem;
+  border-radius: 8px;
 }
 
 .section1 .section-img {
@@ -125,4 +146,53 @@ section {
   background-size: cover;
   background-position: center;
   padding-bottom: 80%;
+}
+
+.section2 .section-img {
+  background: url("images/mobile/image-stand-out.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 80%;
+}
+
+.section3 {
+  background: url("images/mobile/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-bottom: 15%;
+  /* padding-top: 20rem; */
+}
+
+.section3 h2,
+.section3 p {
+  color: var(--dark-desat-cyan);
+}
+
+.section4 h2,
+.section4 p {
+  color: var(--dark-blue);
+}
+
+.section4 {
+  background: url("images/mobile/image-photography.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-bottom: 15%;
+}
+
+.text-on-img-bottom {
+  padding: 110% 10px 0 10px;
+  font-size: 0.9rem;
+}
+
+.text-on-img-bottom h2 {
+  font-weight: 900;
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+}
+.text-on-img-bottom p {
+  line-height: 1.4rem;
 }

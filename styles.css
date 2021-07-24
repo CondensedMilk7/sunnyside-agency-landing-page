@@ -131,9 +131,10 @@ section {
   margin: auto;
   margin-top: -0.4rem;
   border-radius: 8px;
+  transition: background-color 200ms linear;
 }
 
-.bg-yellow:active {
+.bg-yellow-active {
   background-color: hsl(51, 100%, 49%);
 }
 
@@ -144,10 +145,11 @@ section {
   margin: auto;
   margin-top: -0.4rem;
   border-radius: 8px;
+  transition: background-color 200ms linear;
 }
 
-.bg-red {
-  background-color: hsla(7, 99%, 70%, 0.308);
+.bg-red-active {
+  background-color: hsl(7, 99%, 70%);
 }
 
 .section1 .section-img {

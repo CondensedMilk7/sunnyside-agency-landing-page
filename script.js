@@ -1,4 +1,10 @@
-const modalBtn = document.getElementById("hamburger");
+// Note:
+// maybe add intersection observer so that the header changes from transparent
+// to solid color when it leaves the first image.
+
+const hamburger = document.getElementById("hamburger");
+const modal = document.querySelector(".modal");
+const backdrop = document.querySelector(".backdrop");
 
 const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
@@ -8,10 +14,18 @@ const bg2 = document.querySelector(".bg-red");
 
 let modalActive = false;
 
-modalBtn.addEventListener("click", () => {
+hamburger.addEventListener("click", () => {
   modalActive = !modalActive;
   console.log("Modal Avtive: " + modalActive);
-  // make modal appear ...
+
+  hamburger.classList.toggle("hamburger-active");
+  modal.classList.toggle("hidden");
+  backdrop.classList.toggle("hidden");
+});
+
+backdrop.addEventListener("click", () => {
+  modal.classList.add("hidden");
+  backdrop.classList.add("hidden");
 });
 
 btn1.addEventListener("mouseover", () => {

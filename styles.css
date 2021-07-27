@@ -50,6 +50,88 @@ h3 {
   padding: 16px;
   padding-top: 24px;
   background: #3dbeff;
+  z-index: 9;
+}
+
+#hamburger {
+  transition: opacity 100ms linear;
+}
+
+.hamburger-active {
+  opacity: 60%;
+}
+
+.backdrop {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  
+}
+
+.modal {
+  z-index: 11;
+  position: fixed;
+  top: 5.5rem;
+  left: 50%;
+  width: 88%;
+  height: 17rem;
+  background: white;
+  margin-left: -44%; /* Half of its width */
+  transition: visibility 200ms linear;
+}
+
+.point {
+  background: rgba(0, 0, 0, 0.329);
+  height: 32px;
+  margin-top: -32px;
+  background: linear-gradient(
+    315deg,
+    rgba(255, 255, 255, 1) 7%,
+    rgba(2, 0, 36, 0) 7%
+  );
+}
+
+@media (min-width: 500px) {
+  .point {
+    background: linear-gradient(
+      325deg,
+      rgba(255, 255, 255, 1) 7%,
+      rgba(2, 0, 36, 0) 7%
+    );
+  }
+}
+
+.modal nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.modal-link {
+  text-decoration: none;
+  margin: -12px 0 -12px 0;
+  color: var(--dark-grayish-blue);
+}
+
+.modal-contact-btn {
+  text-decoration: none;
+  color: var(--very-dark-blue);
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  background: hsl(51, 100%, 49%);
+  padding: 16px 26px;
+  border-radius: 30px;
+  transition: color 100ms linear;
+}
+
+.modal-contact-btn:active,
+.modal-contact-btn:hover {
+  color: white;
 }
 
 .hero {

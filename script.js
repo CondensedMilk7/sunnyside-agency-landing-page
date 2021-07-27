@@ -26,6 +26,7 @@ hamburger.addEventListener("click", () => {
 backdrop.addEventListener("click", () => {
   modal.classList.add("hidden");
   backdrop.classList.add("hidden");
+  hamburger.classList.toggle("hamburger-active");
 });
 
 btn1.addEventListener("mouseover", () => {

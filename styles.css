@@ -39,6 +39,10 @@ h3 {
   color: var(--very-dark-blue);
 }
 
+a {
+  cursor: pointer;
+}
+
 .main-header {
   position: fixed;
   width: 100%;
@@ -47,14 +51,17 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
-  padding-top: 24px;
+  padding: 26px 16px;
   background: #3dbeff;
   z-index: 9;
 }
 
 #hamburger {
   transition: opacity 100ms linear;
+}
+
+.nav-links {
+  display: none;
 }
 
 .hamburger-active {
@@ -68,7 +75,6 @@ h3 {
   z-index: 10;
   top: 0;
   left: 0;
-  
 }
 
 .modal {
@@ -358,4 +364,91 @@ footer ul {
 .contact-icons img {
   height: 50%;
   margin: 0 0.6rem;
+}
+
+@media (min-width: 700px) {
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 0.8rem;
+    color: var(--white);
+  }
+
+  .contact-btn {
+    color: var(--very-dark-blue);
+    text-transform: uppercase;
+    font-family: "Fraunces", serif;
+    background: var(--white);
+    padding: 15px 23px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    transition: color 200ms linear;
+    transition: background 200ms linear;
+  }
+
+  .contact-btn:active,
+  .contact-btn:hover,
+  .contact-btn:focus {
+    background-color: rgba(255, 255, 255, 0.288);
+    color: white;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .modal {
+    display: none;
+  }
+
+  .hero {
+    background: url(images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 40%;
+    /* padding: 0; */
+  }
+
+  .title-arrow {
+    transform: translateY(200px);
+  }
+
+  .title-arrow h1 {
+    font-size: 3.5rem;
+  }
+
+  .title-arrow img {
+    margin-top: 100px;
+  }
+
+  .section1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .section-img {
+    width: 50%;
+    /* height: auto; */
+  }
+
+  .section-info {
+    width: 50%;
+  }
+
+  .section1 .section-img {
+    background: url(images/desktop/image-transform.jpg);
+    background-repeat: no-repeat;
+    padding: 0;
+    background-size: cover;
+    padding-bottom: 42%;
+  }
 }

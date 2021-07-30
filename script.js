@@ -16,7 +16,6 @@ let modalActive = false;
 
 hamburger.addEventListener("click", () => {
   modalActive = !modalActive;
-  console.log("Modal Avtive: " + modalActive);
 
   hamburger.classList.toggle("hamburger-active");
   modal.classList.toggle("hidden");
